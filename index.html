@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Money Mentor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💰 AI Money Mentor</h1>
+    <p>Your Personal Finance Dashboard</p>
+
+    <!-- INPUT -->
+    <input type="number" id="income" placeholder="Monthly Income">
+    <input type="number" id="expenses" placeholder="Monthly Expenses">
+
+    <button onclick="calculate()">Get Plan</button>
+
+    <!-- RESULT -->
+    <div class="card">
+        <h3>💰 Savings</h3>
+        <p id="savings"></p>
+    </div>
+
+    <div class="card">
+        <h3>📈 SIP</h3>
+        <p id="sip"></p>
+    </div>
+
+    <div class="card">
+        <h3>🛡️ Emergency Fund</h3>
+        <p id="emergency"></p>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-container">
+        <div id="bar"></div>
+    </div>
+
+    <h3 id="advice"></h3>
+
+    <hr>
+
+    <!-- CHART -->
+    <h3 id="chartTitle" style="display:none;">📊 Savings Growth</h3>
+    <canvas id="chart" style="display:none;"></canvas>
+
+    <hr>
+
+    <!-- GOAL -->
+    <h3>🎯 Goal Planner</h3>
+    <input type="number" id="goalAmount" placeholder="Goal Amount (₹)">
+    <input type="number" id="years" placeholder="Years">
+    <button onclick="calculateGoal()">Plan Goal</button>
+
+    <p id="goalResult"></p>
+
+    <hr>
+
+    <!-- 🤖 AI CHAT -->
+    <h3>🤖 Ask AI</h3>
+    <input type="text" id="question" placeholder="Ask about money...">
+    <button onclick="askAI()">Ask</button>
+
+    <p id="chat"></p>
+
+    <hr>
+
+    <!-- 🔥 MONEY HEALTH SCORE -->
+    <h3>📊 Money Health Score</h3>
+
+    <input type="number" id="age" placeholder="Your Age">
+    <input type="number" id="debt" placeholder="Total Debt (₹)">
+    <input type="number" id="investments" placeholder="Investments (₹)">
+
+    <button onclick="calculateScore()">Check Score</button>
+
+    <div class="card">
+        <h2 id="score"></h2>
+        <p id="scoreAdvice"></p>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+<script src="script.js"></script>
+<button onclick="calculate()">Get Plan</button>
+<button onclick="calculateScore()">Check Score</button>
